@@ -1,3 +1,5 @@
+require_relative "contact"
+
 class CRM
 
   def initialize
@@ -17,7 +19,15 @@ class CRM
   end
 
   def add_new_contact
-
+    puts "Enter your first name."
+    first_name = gets.chomp
+    puts "Enter your last name."
+    last_name = gets.chomp
+    puts "Enter your email address."
+    email = gets.chomp
+    puts "Enter a note."
+    note = gets.chomp
+    puts "Your name is #{first_name} #{last_name}. Your email is #{email}. Note - #{note}"
   end
 
   def modify_existing_contact
@@ -29,11 +39,11 @@ class CRM
   end
 
   def display_all_contacts
-    
+
   end
 
   def search_by_attribute
-    
+
   end
 
 
