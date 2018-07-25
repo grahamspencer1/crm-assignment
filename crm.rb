@@ -2,8 +2,9 @@ require_relative "contact"
 
 class CRM
 
-  def initialize
-
+  def initialize(name)
+    @name = name
+    puts "Okay, this CRM has the name " + name
   end
 
   def main_menu
@@ -43,7 +44,7 @@ class CRM
     email = gets.chomp
     puts "Enter a note."
     note = gets.chomp
-    puts "Your name is #{first_name} #{last_name}. Your email is #{email}. Note - #{note}"
+    Contact.create(first_name, last_name, email, note)
   end
 
   def modify_existing_contact
@@ -64,3 +65,5 @@ class CRM
 
 
 end
+
+p main_menu
